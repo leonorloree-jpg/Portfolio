@@ -86,42 +86,20 @@ const WORK_EXPERIENCE = [
       "Stress testing of new belt materials",
       "Engineering presentations justifying all design decisions"
     ],
-    link: "w1.html"
-  },
-  {
-    company: "Georgia Tech Invention Studio",
-    role: "Prototyping Instructor & CNC Apprentice",
-    dates: "2024 – Present",
-    heroImage: "",
-    blurb: "Assist students across majors in engineering and design challenges. Apprenticing in the CNC department learning 3D metal/wood CNC and 4-axis operations on the EMCO.",
-    highlights: [
-      "Prototyping instruction across 3D printing, laser cutting, and manual machining",
-      "CNC apprenticeship toward department mastery",
-      "EMCO 4-axis operations"
-    ],
-    link: ""
+    link: "w2.html"
   },
   {
     company: "GT Propulsive Landers Club",
     role: "Structures Subteam",
-    dates: "2024 – Present",
+    dates: "Jan 2025 – Dec 2025",
     heroImage: "",
     blurb: "Working on monoprop testing assemblies and the design of a 2500N hybrid engine for a propulsive lander challenge.",
     highlights: [
       "Monoprop testing assembly development",
       "2500N hybrid engine structural design"
     ],
-    link: ""
+    link: "w1.html"
   },
-  {
-    company: "Georgia Institute of Technology",
-    role: "B.S. Mechanical Engineering",
-    dates: "2024 – Present",
-    heroImage: "",
-    blurb: "Coursework in vibrations, manufacturing, dynamics, and experimental methods. Hands-on machine shop and CNC experience.",
-    highlights: [],
-    link: ""
-  }
 ];
 
 const SKILLS = [
