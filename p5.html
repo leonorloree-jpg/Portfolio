@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transforming Buzz Mascot — Oliver Loree</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+<div class="bg-simple"></div>
+<div class="noise"></div>
+
+<div class="nav-overlay" id="navOverlay"></div>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">Oliver Loree</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="archive.html">Archive</a>
+    <a href="experience.html">Experience</a>
+  </div>
+</nav>
+
+<div class="project-page">
+
+  <div class="project-hero">
+    <img src="https://pub-c94488256fcd4c54ba252c6fe9ad300d.r2.dev/pictures/p5/p5_model.jpg" alt="Transforming Buzz">
+    <h1 class="project-hero-title" id="heroTitle">Transforming Buzz Mascot</h1>
+  </div>
+
+  <div class="project-meta">
+    <div><strong>Completed:</strong> Jan 2025 – May 2025</div>
+    <div><strong>Key Skills:</strong> CAD Design, Leadership, DFMA, Additive Manufacturing</div>
+  </div>
+
+  <div class="project-container">
+
+    <div class="text-image-section reveal">
+      <div class="text-content">
+        <h2>Project Overview and Research</h2>
+        <p>This project was proposed by my school's Advanced Manufacturing Research Lab as a chance to show off their manufacturing capabilities. They planned to design a transformer to stand ~3 feet tall using all of their manufacturing methods from CNC to wire EDM and Powder Bed Fusion.</p>
+        <p>I started this project on a team of three where we researched the two states, the Ford Model A and our mascot Buzz, to see what mechanisms we could use to bring the two designs together.</p>
+      </div>
+      <div class="image-content">
+        <img src="https://pub-c94488256fcd4c54ba252c6fe9ad300d.r2.dev/pictures/p5/p5_research.jpg" alt="Research">
+      </div>
+    </div>
+
+    <div class="text-image-section reveal">
+      <div class="image-content">
+        <img src="https://pub-c94488256fcd4c54ba252c6fe9ad300d.r2.dev/pictures/p5/p5_ass.jpg" alt="Assembly">
+      </div>
+      <div class="text-content">
+        <h2>Design Process</h2>
+        <p>For the design, I started by finding some reference dimensions on the Ford Model A, and I made a reference CAD model that we could build the Buzz model off of. From there we divided into three subsections, the head, the torso, and the legs.</p>
+        <p>From there, I started by designing the legs with a fold out design, taking advantage of the tall middle structure to support the model from tipping with a wide base.</p>
+        <p>While designing the feet, I also took care to ensure the dimensions of each component would fit within the size of our printers, using fasteners to assemble closed components.</p>
+      </div>
+    </div>
+
+    <div class="three-images reveal">
+      <img src="https://pub-c94488256fcd4c54ba252c6fe9ad300d.r2.dev/pictures/p5/p5_leg.jpg" alt="Legs">
+      <img src="https://pub-c94488256fcd4c54ba252c6fe9ad300d.r2.dev/pictures/p5/p5_torso.jpg" alt="Torso">
+      <img src="https://pub-c94488256fcd4c54ba252c6fe9ad300d.r2.dev/pictures/p5/p5_top.jpg" alt="Top">
+    </div>
+
+    <div class="text-image-section reveal">
+      <div class="text-content">
+        <h2>Favorite Component</h2>
+        <p>One of my favorite features that I designed was this collapsible tail structure. Using a series of spline curves in SolidWorks, I created these individual curved shells with guide rails. A bumper on the bottom prevents them from coming apart, and the curved profile closely resembles Buzz's stinger!</p>
+      </div>
+      <div class="image-content">
+        <img src="https://pub-c94488256fcd4c54ba252c6fe9ad300d.r2.dev/pictures/p5/p5_tail.jpg" alt="Tail design">
+      </div>
+    </div>
+
+    <div class="centered-text reveal">
+      <h2>Project in Action</h2>
+      <p>Here's a quick video showing the rough model of how our robot would transform!</p>
+    </div>
+
+    <div class="video-wrapper reveal">
+      <iframe src="https://www.youtube.com/embed/gA-vkWOX5NY" title="Buzz transformer animation" referrerpolicy="strict-origin-when-cross-origin" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%; aspect-ratio:16/9; border-radius:var(--radius-lg); border:1px solid var(--border);"></iframe>
+    </div>
+
+    <div class="project-nav" id="navButtons"></div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <span>&copy; 2026 Oliver Loree</span>
+  <span>Georgia Institute of Technology</span>
+</footer>
+
+<script src="values.js"></script>
+<script src="shared.js"></script>
+<script>
+  const CURRENT_PROJECT_ID = 5;
+  const adj = getAdjacentProjects(CURRENT_PROJECT_ID);
+  const nav = document.getElementById('navButtons');
+  let h = '';
+  if (adj.previous) h += `<a href="${adj.previous.link}" class="btn">← ${adj.previous.name}</a>`;
+  else h += `<button class="btn" disabled>← Previous</button>`;
+  h += `<a href="archive.html" class="btn primary">Back to Archive</a>`;
+  if (adj.next) h += `<a href="${adj.next.link}" class="btn">${adj.next.name} →</a>`;
+  else h += `<button class="btn" disabled>Next →</button>`;
+  nav.innerHTML = h;
+</script>
+</body>
+</html>

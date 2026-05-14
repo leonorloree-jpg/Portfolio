@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>George Washington Sculpture — Oliver Loree</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+<div class="bg-simple"></div>
+<div class="noise"></div>
+
+<div class="nav-overlay" id="navOverlay"></div>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">Oliver Loree</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="archive.html">Archive</a>
+    <a href="experience.html">Experience</a>
+  </div>
+</nav>
+
+<div class="project-page">
+
+  <div class="project-hero">
+    <img src="https://pub-c94488256fcd4c54ba252c6fe9ad300d.r2.dev/pictures/p6/p6_hero.jpg" alt="George Washington Sculpture">
+    <h1 class="project-hero-title" id="heroTitle">George Washington Sculpture</h1>
+  </div>
+
+  <div class="project-meta">
+    <div><strong>Completed:</strong> 2024</div>
+    <div><strong>Key Skills:</strong> 3D Printing, Fusion 360, Electronics, Finishing, Prototyping</div>
+  </div>
+
+  <div class="project-container">
+
+    <div class="text-image-section reveal">
+      <div class="text-content">
+        <h2>Project Overview</h2>
+        <p>This project involved designing and fabricating a large-scale 3D printed sculpture of George Washington, integrating electronics for audio playback through an internal speaker system. The model was broken into printable sections, soldered together, and finished through multiple rounds of bondo, sanding, and painting.</p>
+        <p>After this it was onto manufacturing.</p>
+      </div>
+      <div class="image-content">
+        <img src="https://pub-c94488256fcd4c54ba252c6fe9ad300d.r2.dev/pictures/p6/p6_cad.jpg" alt="CAD Model">
+      </div>
+    </div>
+
+    <div class="text-image-section reveal">
+      <div class="image-content">
+        <img src="https://pub-c94488256fcd4c54ba252c6fe9ad300d.r2.dev/pictures/p6/p6_helmet.jpg" alt="Helmet reference">
+      </div>
+      <div class="text-content">
+        <h2>Do You Enjoy Sanding?</h2>
+        <p>Making a 3D printed sculpture is actually really easy! When I was in middle school I made the fallout helmet model and used superglue and bondo to hold it together, it was fragile and the seams weren't that clean, but it was basically a large jigsaw puzzle.</p>
+        <p>For this project I knew that I had to hold myself to a higher standard so I followed a tighter protocol. Break the model into pieces, solder the plastic together into chunks, apply bondo modeling compound to the seams, then sand. Most importantly, after sanding, applying a coat of gloss would reveal all too well where sanding left layer lines or bondo wasn't properly blended with the plastic.</p>
+        <p>Solder, bondo, sand, paint, repeat. I followed this process for about a week as I took Georgie from 12+ pieces to three, then to 1, then through 4 rounds of painting to make sure he was spic and span for his big day.</p>
+      </div>
+    </div>
+
+    <div class="three-images reveal">
+      <img src="https://pub-c94488256fcd4c54ba252c6fe9ad300d.r2.dev/pictures/p6/p6_sanding_1.jpg" alt="Sanding 1">
+      <img src="https://pub-c94488256fcd4c54ba252c6fe9ad300d.r2.dev/pictures/p6/p6_sanding_2.jpg" alt="Sanding 2">
+      <img src="https://pub-c94488256fcd4c54ba252c6fe9ad300d.r2.dev/pictures/p6/p6_sanding_3.jpg" alt="Sanding 3">
+    </div>
+
+    <div class="text-image-section reveal">
+      <div class="text-content">
+        <h2>Interior and Missed Opportunities</h2>
+        <p>With the exterior handled I moved onto the interior electronics where I realized what most electrical engineers realize early on. Wiring anything complex is terrible. After an afternoon spent trying to splice several wires into Y-shaped forks with a soldering iron and bucket of fast-drying rubber paste, I was recommended the industry standard, the miraculous WAGO.</p>
+        <p>A big part of this project was that I wanted to incorporate AI into it. I had a Raspberry Pi 4 new from a school competition and I planned to download a local tinyllama model onto it. For about two weeks I researched AI voice models and speech detection before ultimately settling on a tinyllama model for processing, kokoro TTS for clean voicing and whisper AI to turn input microphone speech into text.</p>
+        <p>George didn't respond for 5 minutes. With all that time to think he answered me in three sentences and again fell silent. No matter how much optimization I could try, there would be no way I could run AI locally on a Raspberry Pi 4. While I definitely have the toolbox to implement this in a future project, I chose to forgo it on Washington, using the bluetooth receiver I specc'ed into the system as a backup.</p>
+      </div>
+      <div class="image-content">
+        <img src="https://pub-c94488256fcd4c54ba252c6fe9ad300d.r2.dev/pictures/p6/p6_inside_electronics.jpg" alt="Interior electronics">
+      </div>
+    </div>
+
+    <div class="centered-text reveal">
+      <h2>Lessons Learned</h2>
+      <p>This was a fascinating way to explore the way that Fusion 360 and other CAD software handles mesh files versus solid objects and the computational costs of large operations trees. I picked up some passive summer knowledge that I reapplied from an old electrical engineering class to make my dual audio channel amplifier, and I got to really step up my 3D printing and modeling game.</p>
+      <p>If I could do this project again, I would have looked for more mechanized ways to sand the final product instead of doing it by hand, and I would have looked for stronger fans for airflow as well as a cleaner signal amplifier. Better understanding and researching my electrical assembly would influence a faster assembly and cleaner sound.</p>
+    </div>
+
+    <div class="centered-text reveal">
+      <h2>Testing the Speakers</h2>
+      <p>Enjoy a video of me testing the speaker on the final model.</p>
+    </div>
+
+    <div class="video-wrapper reveal" style="text-align:center;">
+      <iframe src="https://www.youtube.com/embed/7E3zwIUuEgI" title="Washington speaker test" referrerpolicy="strict-origin-when-cross-origin" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%; aspect-ratio:9/16; max-width:400px; display:block; margin:0 auto; border-radius:var(--radius-lg); border:1px solid var(--border);"></iframe>
+      <noscript><a href="https://youtube.com/shorts/7E3zwIUuEgI" class="btn" style="margin-top:1rem;">Watch on YouTube</a></noscript>
+    </div>
+
+    <div class="project-nav" id="navButtons"></div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <span>&copy; 2026 Oliver Loree</span>
+  <span>Georgia Institute of Technology</span>
+</footer>
+
+<script src="values.js"></script>
+<script src="shared.js"></script>
+<script>
+  const CURRENT_PROJECT_ID = 6;
+  const adj = getAdjacentProjects(CURRENT_PROJECT_ID);
+  const nav = document.getElementById('navButtons');
+  let h = '';
+  if (adj.previous) h += `<a href="${adj.previous.link}" class="btn">← ${adj.previous.name}</a>`;
+  else h += `<button class="btn" disabled>← Previous</button>`;
+  h += `<a href="archive.html" class="btn primary">Back to Archive</a>`;
+  if (adj.next) h += `<a href="${adj.next.link}" class="btn">${adj.next.name} →</a>`;
+  else h += `<button class="btn" disabled>Next →</button>`;
+  nav.innerHTML = h;
+</script>
+</body>
+</html>

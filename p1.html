@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Air Compressor — Oliver Loree</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+<div class="bg-simple"></div>
+<div class="noise"></div>
+
+<div class="nav-overlay" id="navOverlay"></div>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">Oliver Loree</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="archive.html">Archive</a>
+    <a href="experience.html">Experience</a>
+  </div>
+</nav>
+
+<div class="project-page">
+
+  <div class="project-hero">
+    <img src="https://pub-c94488256fcd4c54ba252c6fe9ad300d.r2.dev/pictures/p1/p1_hero.jpg" alt="Air Compressor" id="heroImage">
+    <h1 class="project-hero-title" id="heroTitle">Air Compressor</h1>
+  </div>
+
+  <div class="project-meta" id="projectMeta">
+    <div><strong>Completed:</strong> May 2023 – Jul 2023</div>
+    <div><strong>Key Skills:</strong> Prototyping, Manufacturing, CAD Design, Project Planning</div>
+  </div>
+
+  <div class="project-container">
+
+    <div class="text-image-section reveal">
+      <div class="text-content">
+        <h2>Project Overview</h2>
+        <p>This project was a supplementary project to another invention I was working on. I needed a readily available source of compressed air, but I didn't have an air compressor at home. Instead of going and buying one from home depot, I elected to try and make a backpack-mounted version that I could hopefully use to carry compressed air or compressed fluid.</p>
+        <p>The body was made from two fire extinguishers that I purchased off of facebook marketplace, and the regulator fittings ensured that when pressurized, the assembly let off a consistent 100psi, while blowoff valves prevented the assembly from going over 150psi - the working limit I established for the two extinguishers.</p>
+      </div>
+      <div class="image-content">
+        <img src="https://pub-c94488256fcd4c54ba252c6fe9ad300d.r2.dev/pictures/p1/p1_hero.jpg" alt="Air Compressor Overview">
+      </div>
+    </div>
+
+    <div class="text-image-section reveal">
+      <div class="image-content">
+        <img src="https://pub-c94488256fcd4c54ba252c6fe9ad300d.r2.dev/pictures/p1/p1_prototype.jpg" alt="Prototype">
+      </div>
+      <div class="text-content">
+        <h2>Design Process</h2>
+        <p>I tried to first design 3D printed fittings for the fire extinguishers, but after multiple failures, I elected to keep the factory-made heads and drill in my own access points for brass tubing.</p>
+        <p>The compressor unit came out of an old freezer unit we had at home. I took it apart, inspected the components, and salvaged the compressor. I briefly looked into a local AC repair company for industrially sized compressors, but I found none of them were easily portable so I left them behind.</p>
+      </div>
+    </div>
+
+    <div class="project-nav" id="navButtons"></div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <span>&copy; 2026 Oliver Loree</span>
+  <span>Georgia Institute of Technology</span>
+</footer>
+
+<script src="values.js"></script>
+<script src="shared.js"></script>
+<script>
+  const CURRENT_PROJECT_ID = 1;
+  const currentProject = getProjectById(CURRENT_PROJECT_ID);
+  const adj = getAdjacentProjects(CURRENT_PROJECT_ID);
+  if (currentProject) {
+    document.getElementById('heroTitle').textContent = currentProject.name;
+    document.title = `${currentProject.name} — Oliver Loree`;
+  }
+  const nav = document.getElementById('navButtons');
+  let h = '';
+  if (adj.previous) h += `<a href="${adj.previous.link}" class="btn">← ${adj.previous.name}</a>`;
+  else h += `<button class="btn" disabled>← Previous</button>`;
+  h += `<a href="archive.html" class="btn primary">Back to Archive</a>`;
+  if (adj.next) h += `<a href="${adj.next.link}" class="btn">${adj.next.name} →</a>`;
+  else h += `<button class="btn" disabled>Next →</button>`;
+  nav.innerHTML = h;
+</script>
+</body>
+</html>
