@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tambour Cabinet — Oliver Loree</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+<div class="bg-simple"></div>
+<div class="noise"></div>
+
+<div class="nav-overlay" id="navOverlay"></div>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">Oliver Loree</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="archive.html">Archive</a>
+    <a href="experience.html">Experience</a>
+  </div>
+</nav>
+
+<div class="project-page">
+
+  <div class="project-hero">
+    <img src="pictures/p4/p4_hero.jpg" alt="Tambour Cabinet">
+    <h1 class="project-hero-title" id="heroTitle">Tambour and Kerf Bending Cabinet</h1>
+  </div>
+
+  <div class="project-meta">
+    <div><strong>Completed:</strong> Nov 2024 – Mar 2025</div>
+    <div><strong>Key Skills:</strong> Prototyping, Manufacturing, CAD Design, Project Planning</div>
+  </div>
+
+  <div class="project-container">
+
+    <div class="text-image-section reveal">
+      <div class="text-content">
+        <h2>Project Overview</h2>
+        <p>I never did woodworking before this project, but was always impressed by tambour door structures and kerf bending to smooth out corners in wood, so I pledged to design the cabinet I wanted and commit to prototyping it until I could make it perfectly.</p>
+        <p>I started in November with a bill of materials, rough project timeline, and CAD model. From CAD, I had to start prototyping to ensure that I could actually make the components of this project before putting down serious money.</p>
+      </div>
+      <div class="image-content">
+        <img src="pictures/p4/p4_cad.jpg" alt="CAD Design">
+      </div>
+    </div>
+
+    <div class="three-images reveal">
+      <img src="pictures/p4/p4_poc1.jpg" alt="POC 1">
+      <img src="pictures/p4/p4_poc2.jpg" alt="POC 2">
+      <img src="pictures/p4/p4_poc3.jpg" alt="POC 3">
+    </div>
+
+    <div class="three-images reveal">
+      <img src="pictures/p4/p4_poc4.jpg" alt="POC 4">
+      <img src="pictures/p4/p4_poc5.jpg" alt="POC 5">
+      <img src="pictures/p4/p4_poc6.jpg" alt="POC 6">
+    </div>
+
+    <div class="centered-text reveal">
+      <h2>Prototyping Notes</h2>
+      <p>I ended up going through about 4-5 iterations of my kerf bending using heat, water, steam, and other forming methods to get the curve I wanted. Eventually I went back to basics with some rough geometry calculations, and with some very fine cuts, I was able to get a successful proof of concept together.</p>
+      <p>After that kerf bending, I found it easy to make a proof of concept for the tambour door, and confident in my abilities to make the subsections, I moved onto the project at large.</p>
+    </div>
+
+    <div class="text-image-section reveal">
+      <div class="image-content">
+        <img src="pictures/p4/P4_jig.jpg" alt="Router Jig">
+      </div>
+      <div class="text-content">
+        <h2>Design Process</h2>
+        <p>Making this cabinet, my goal was to avoid any 3D CNC work. When I posted it online at the end, I wanted to ensure anyone could make it with some time and dedication. As a result, I used a hand router for all operations, taking care to cut out custom MDF jigs that I used to guide my cuts in a human-CNC type of way.</p>
+      </div>
+    </div>
+
+    <div class="three-images reveal">
+      <img src="pictures/p4/p4_manual.jpg" alt="Manual milling">
+      <img src="pictures/p4/p4_laser.jpg" alt="Laser cutting">
+      <img src="pictures/p4/p4_roof.jpg" alt="Roof assembly">
+    </div>
+
+    <div class="text-image-section reveal">
+      <div class="text-content">
+        <h2>Tambour Construction</h2>
+        <p>After milling the two main slabs of the structure, I used a laser cutter and CAD to cut out all of the hexagons for the top section before moving onto the tambour door.</p>
+        <p>Of the whole project, the tambour door was the most labor intensive. I ended up making 80 separate slabs, numbered to preserve the flow of the grain, before gluing and milling them with a router to make the door. I cannot express how happy I was when I finally got it on the track for the first time.</p>
+      </div>
+      <div class="image-content">
+        <img src="pictures/p4/p4_slabs.jpg" alt="Tambour slabs">
+      </div>
+    </div>
+
+    <div class="video-wrapper reveal">
+      <video controls>
+        <source src="movies/p4_door.mov" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="text-image-section reveal">
+      <div class="image-content">
+        <img src="pictures/p4/p4_curved.jpg" alt="Curved assembly">
+      </div>
+      <div class="text-content">
+        <h2>Final Assembly</h2>
+        <p>After making the tambour door, I moved to add kerfs into my two ~8 foot walnut plywood sheets, joining them together with maple strips and wrapping them around the chamfered edges of my slabs before wood gluing them round form together.</p>
+        <p>After making the outside, I just added in the interior walls, aligned the tambour door on its track, then glued the whole thing shut.</p>
+        <p>This has probably been my favorite project so far, but I have another woodworking project coming soon that will finally get some use out of our studio CNC, stay tuned!</p>
+      </div>
+    </div>
+
+    <div class="project-nav" id="navButtons"></div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <span>&copy; 2026 Oliver Loree</span>
+  <span>Georgia Institute of Technology</span>
+</footer>
+
+<script src="values.js"></script>
+<script src="shared.js"></script>
+<script>
+  const CURRENT_PROJECT_ID = 4;
+  const adj = getAdjacentProjects(CURRENT_PROJECT_ID);
+  const nav = document.getElementById('navButtons');
+  let h = '';
+  if (adj.previous) h += `<a href="${adj.previous.link}" class="btn">← ${adj.previous.name}</a>`;
+  else h += `<button class="btn" disabled>← Previous</button>`;
+  h += `<a href="archive.html" class="btn primary">Back to Archive</a>`;
+  if (adj.next) h += `<a href="${adj.next.link}" class="btn">${adj.next.name} →</a>`;
+  else h += `<button class="btn" disabled>Next →</button>`;
+  nav.innerHTML = h;
+</script>
+</body>
+</html>

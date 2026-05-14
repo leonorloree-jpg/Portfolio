@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ECVT Planetary Gearbox — Oliver Loree</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+<div class="bg-simple"></div>
+<div class="noise"></div>
+
+<div class="nav-overlay" id="navOverlay"></div>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">Oliver Loree</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="archive.html">Archive</a>
+    <a href="experience.html">Experience</a>
+  </div>
+</nav>
+
+<div class="project-page">
+
+  <div class="project-hero">
+    <img src="pictures/p7/p7_hero.jpg" alt="ECVT Planetary Gearbox">
+    <h1 class="project-hero-title" id="heroTitle">ECVT Planetary Gearbox</h1>
+  </div>
+
+  <div class="project-meta">
+    <div><strong>Completed:</strong> Aug 2024 – May 2025</div>
+    <div><strong>Key Skills:</strong> CNC, Casting, Wire EDM, CAD Design, Embedded Systems, Motor Control, Manufacturing</div>
+  </div>
+
+  <div class="project-container">
+
+    <!-- Overview -->
+    <div class="text-image-section reveal">
+      <div class="text-content">
+        <h2>Project Overview</h2>
+        <p>This project began as a way for me and my friends Ali and Maxwell to learn more manufacturing techniques at the Georgia Tech Invention Studio. It evolved into a full senior capstone-level effort: designing and fabricating a functional electronic continuously variable transmission (ECVT) using a sun-planetary gear system driven by two brushless DC motors.</p>
+        <p>Rather than using a conventional gearbox, we control output speed by varying the relative RPM of two motors coupled through the planetary gear set — no clutch, no gear changes. Every major component was manufactured by hand, from sand-cast aluminum housings to wire-EDM steel gears.</p>
+      </div>
+      <div class="image-content">
+        <img src="pictures/p7/p7_1.jpg" alt="ECVT assembly overview">
+      </div>
+    </div>
+
+    <!-- Prototyping -->
+    <div class="text-image-section reveal">
+      <div class="image-content">
+        <img src="pictures/p7/p7_2.jpg" alt="3D printed prototype gears">
+      </div>
+      <div class="text-content">
+        <h2>3D Printed Prototype</h2>
+        <p>Ali took the lead on our initial CAD, modeling a sun-planetary gear system with a ratio of ~2.667:1. At this ratio, if the secondary motor spins in the same direction as the primary at 5000 RPM compared to 1875, the central sprocket stays completely stationary — the core principle behind our continuously variable output.</p>
+        <p>Before committing to metal, we printed our gears in PETG and a rough gearbox housing in PLA with an ABS shaft for torque transmission. After breaking in the gears with lapping compound, we tested the assembly with a pair of Milwaukee drills and confirmed the variable speed output worked as planned.</p>
+      </div>
+    </div>
+
+    <!-- Prototype images -->
+    <div class="three-images reveal">
+      <img src="pictures/p7/p7_3.jpg" alt="PETG gears closeup">
+      <img src="pictures/p7/p7_4.jpg" alt="Prototype gearbox assembled">
+      <img src="pictures/p7/p7_5.jpg" alt="Drill test of prototype">
+    </div>
+
+    <!-- Casting -->
+    <div class="centered-text reveal">
+      <h2>Casting the Gearbox</h2>
+      <p>Casting was a relatively new tool group for the Invention Studio and none of us had cast metal before. Using sand casting, we created negatives of 3D printed positives and filled them with molten aluminum. We scaled our CAD model to 103% to account for solidification shrinkage and added risers to feed the part with liquid metal as it cooled. Maxwell and I were simultaneously taking ME 3210: Design, Materials, and Manufacture, so we got to apply casting theory directly from class to the shop floor.</p>
+    </div>
+
+    <div class="three-images reveal">
+      <img src="pictures/p7/p7_6.jpg" alt="Sand mold setup">
+      <img src="pictures/p7/p7_7.jpg" alt="Pouring molten aluminum">
+      <img src="pictures/p7/p7_8.jpg" alt="Raw cast gearbox half">
+    </div>
+
+    <!-- Post-cast machining -->
+    <div class="text-image-section reveal">
+      <div class="text-content">
+        <h2>Post-Cast Machining</h2>
+        <p>Once cast, we used our EMCO CNC mill to shave down the interior face of the gearbox half for a fine surface finish and watertight seal. We welded on a metal flange and drilled a fill hole so we could add and remove oil from the sealed gearbox later.</p>
+        <p>The cast half came out heavier than anticipated and tolerances left something to be desired — some weak regions needed aluminum weld fills. Because the second gearbox half was much flatter, we decided to skip casting entirely and machine it straight from aluminum stock to exact dimensions, saving time and getting tighter tolerances where we needed them.</p>
+      </div>
+      <div class="image-content">
+        <img src="pictures/p7/p7_9.jpg" alt="CNC machining the gearbox">
+      </div>
+    </div>
+
+    <!-- Bearings -->
+    <div class="two-images reveal">
+      <img src="pictures/p7/p7_10.jpg" alt="Press fit bearings installed">
+      <img src="pictures/p7/p7_11.jpg" alt="Gearbox halves with seals">
+    </div>
+
+    <!-- Wire EDM -->
+    <div class="text-image-section reveal">
+      <div class="image-content">
+        <img src="pictures/p7/p7_12.jpg" alt="Wire EDM cut steel gears">
+      </div>
+      <div class="text-content">
+        <h2>Precision Gears: Wire EDM</h2>
+        <p>Our waterjet would have made good gears, but we wanted great gears. We reached out to the Montgomery Machining Mall and Mr. Scott Elliot for support. Using Wire EDM — running a hair-thin electrically charged wire near the workpiece to vaporize material with incredible precision — we cut our planetary gears from 0.5" thick mild steel with smooth finishes and tight tolerances far beyond what the waterjet could achieve.</p>
+        <p>To lock the gears rotationally, we machined keyways into the steel gears using a spindexer on the manual mill, then reamed the bores for a tight shaft fit. Axial locking came from retaining rings seated in grooves cut with a sub-1/32" endmill. The manual mill's stiffness was essential here — those extra thousandths of precision made the difference between a snug fit and a ruined part.</p>
+      </div>
+    </div>
+
+    <div class="three-images reveal">
+      <img src="pictures/p7/p7_13.jpg" alt="Wire EDM in progress">
+      <img src="pictures/p7/p7_14.jpg" alt="Keyway machining on manual mill">
+      <img src="pictures/p7/p7_15.jpg" alt="Finished planetary gear assembly">
+    </div>
+
+    <!-- Finished gearbox -->
+    <div class="centered-text reveal">
+      <h2>Finished Gearbox</h2>
+      <p>With the gears assembled, we rough-fit the shaft assembly between the two shells. Brass shaft collars on each end prevented axial sliding as it spun between the two motors. Once the gears were broken in dry, we added oil and had a complete, sealed ECVT gearbox ready for integration.</p>
+    </div>
+
+    <!-- Motor control -->
+    <div class="text-image-section reveal">
+      <div class="text-content">
+        <h2>Driving BLDC Motors</h2>
+        <p>We chose brushless DC motors for their power density, durability, and fine speed/torque control compared to brushed alternatives. Rather than writing our own commutation code from scratch, we used ODrive S1 and ODrive Pro motor controllers — mounted directly on the motor assemblies with integrated magnetic encoders and an online GUI for calibration and test driving.</p>
+        <p>Connecting UART cables from the STM32, we could command both controllers from our microcontroller. A rotational encoder on the output shaft tracked actual speed, and our first dual-motor test on a prototype shaft confirmed the planetary gear ratio in action.</p>
+      </div>
+      <div class="image-content">
+        <img src="pictures/p7/p7_16.jpg" alt="ODrive motor controller setup">
+      </div>
+    </div>
+
+    <!-- Final assembly -->
+    <div class="text-image-section reveal">
+      <div class="image-content">
+        <img src="pictures/p7/p7_17.jpg" alt="Metal frame final assembly">
+      </div>
+      <div class="text-content">
+        <h2>Final Bench Assembly</h2>
+        <p>We upgraded from the wooden test frame to a metal base using scrap aluminum from the Invention Studio. The Kunray motor got a stronger screw mount, while the ODrive side got a sliding mount — letting us slot the shaft onto one motor, slide the other into position, and lock down for easy maintenance. With the elevated assembly we mounted the primary sprocket and chain.</p>
+        <p>For the smaller sprocket, we reamed the bore slightly undersized and used the hydraulic press to press-fit it onto the shaft. Our first attempt buckled the shaft — a banana-shaped shaft doesn't spin well at thousands of RPM. A supporting guide shaft with a chamfered tip solved the buckling on the second try.</p>
+      </div>
+    </div>
+
+    <div class="three-images reveal">
+      <img src="pictures/p7/p7_18.jpg" alt="Hydraulic press sprocket fitting">
+      <img src="pictures/p7/p7_19.jpg" alt="Sprocket and chain mounted">
+      <img src="pictures/p7/p7_20.jpg" alt="Complete drivetrain on bench">
+    </div>
+
+    <!-- Power safety -->
+    <div class="text-image-section reveal">
+      <div class="text-content">
+        <h2>Power Safety</h2>
+        <p>Our calculations showed up to 20A per motor from a 48V battery — 40A total at any given time, with the real possibility of overcurrent during a fault. Before powering anything on, we implemented a safety plan: an emergency stop to kill the system, a 60A fuse for overcurrent protection, minimum 12 AWG wire per motor and 8 AWG for the battery line, and an on-off switch independent of the E-stop.</p>
+      </div>
+      <div class="image-content">
+        <img src="pictures/p7/p7_21.jpg" alt="Wiring and safety components">
+      </div>
+    </div>
+
+    <!-- Lessons learned -->
+    <div class="centered-text reveal">
+      <h2>Lessons Learned and Next Steps</h2>
+      <p>Manufacturing something with these levels of tolerance and precision isn't normally baked into the mechanical engineering curriculum at Georgia Tech. This project challenged all of our manufacturing skills and gave us meaningful experience with casting, welding, precision machining on the manual mill and Wire EDM, and high-current electrical assembly. We faced setbacks — poor machining on the cast part, a buckled shaft, electromagnetic interference with our display, waterjet malfunctions, and hours of gear lapping — but through each failure we found alternative solutions or integrated new methods.</p>
+      <p>Our eventual goal is to revise the benchtop assembly one more time, making it smaller and more force-resistant, then weld and assemble a go-kart frame to drop this ECVT drive assembly into — likely sometime in 2027.</p>
+    </div>
+
+    <div class="three-images reveal">
+      <img src="pictures/p7/p7_22.jpg" alt="Team photo">
+      <img src="pictures/p7/p7_23.jpg" alt="Finished assembly detail">
+      <img src="pictures/p7/p7_24.jpg" alt="Full assembly wide shot">
+    </div>
+
+    <div class="project-nav" id="navButtons"></div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <span>&copy; 2026 Oliver Loree</span>
+  <span>Georgia Institute of Technology</span>
+</footer>
+
+<script src="values.js"></script>
+<script src="shared.js"></script>
+<script>
+  const CURRENT_PROJECT_ID = 7;
+  const adj = getAdjacentProjects(CURRENT_PROJECT_ID);
+  const nav = document.getElementById('navButtons');
+  let h = '';
+  if (adj.previous) h += `<a href="${adj.previous.link}" class="btn">← ${adj.previous.name}</a>`;
+  else h += `<button class="btn" disabled>← Previous</button>`;
+  h += `<a href="archive.html" class="btn primary">Back to Archive</a>`;
+  if (adj.next) h += `<a href="${adj.next.link}" class="btn">${adj.next.name} →</a>`;
+  else h += `<button class="btn" disabled>Next →</button>`;
+  nav.innerHTML = h;
+</script>
+</body>
+</html>

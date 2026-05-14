@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Infinity Mirror — Oliver Loree</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+<div class="bg-simple"></div>
+<div class="noise"></div>
+
+<div class="nav-overlay" id="navOverlay"></div>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">Oliver Loree</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="archive.html">Archive</a>
+    <a href="experience.html">Experience</a>
+  </div>
+</nav>
+
+<div class="project-page">
+
+  <div class="project-hero">
+    <img src="pictures/p2/p2_hero.jpg" alt="3D Infinity Mirror">
+    <h1 class="project-hero-title" id="heroTitle">3D Infinity Mirror</h1>
+  </div>
+
+  <div class="project-meta">
+    <div><strong>Completed:</strong> Aug 2022 – Jun 2023</div>
+    <div><strong>Key Skills:</strong> Research, Prototyping, Manufacturing, CAD Design, Electronics</div>
+  </div>
+
+  <div class="project-container">
+
+    <div class="text-image-section reveal">
+      <div class="text-content">
+        <h2>Project Overview</h2>
+        <p>This was my most technical CAD project before college. I took up the challenge of learning to design an infinity mirror before turning a simple 2D mirror design into a much more complex, nontraditional X-shaped frame. Throughout the project I researched the principles behind infinity mirrors, contacted companies in the space to understand what made their designs superior, and designed my own frame in CAD.</p>
+        <p>I ended up learning more about electrical circuit requirements, CAD tolerancing for assembly, and wiring diagrams for shapes to coordinate movement of the LED strips in my assembly with 12 vertical legs.</p>
+      </div>
+      <div class="image-content">
+        <img src="pictures/p2/p2_progress.jpg" alt="Progress">
+      </div>
+    </div>
+
+    <div class="centered-text reveal">
+      <h2>Proof of Concept</h2>
+      <p>After consulting companies in the space to understand what makes good infinity mirrors, I started with a simple tetrahedron frame that I modeled in CAD, small enough to print on my home printer as a single piece.</p>
+      <p>I made the walls using clear acrylic sheets and mirrored window film from home depot. The LED strips came from a kit I found online, and I roughly wired them into the frame to test the effect.</p>
+    </div>
+
+    <div class="three-images reveal">
+      <img src="pictures/p2/p2_proto_cad.jpg" alt="Prototype CAD">
+      <img src="pictures/p2/p2_ass.jpg" alt="Assembly">
+      <img src="pictures/p2/p2_prototype.jpg" alt="Prototype">
+    </div>
+
+    <div class="centered-text reveal">
+      <h2>Final Design</h2>
+      <p>After proving my design on a smaller scale, I custom-designed a frame in CAD that would disassemble into 20+ pieces. I then took these pieces and assembled a frame for wiring before buying higher-quality filament, mirrored acrylic, and stronger power LED strips.</p>
+      <p>I researched the necessary power requirements and wiring for the number of LED strips I was running, bought the necessary power supply, wired the entire frame, laser-cut the panels, and put the whole piece together.</p>
+    </div>
+
+    <div class="three-images reveal">
+      <img src="pictures/p2/p2_cad.jpg" alt="Final CAD">
+      <img src="pictures/p2/p2_progress.jpg" alt="Progress">
+      <img src="pictures/p2/p2_hero.jpg" alt="Final Result">
+    </div>
+
+    <div class="project-nav" id="navButtons"></div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <span>&copy; 2026 Oliver Loree</span>
+  <span>Georgia Institute of Technology</span>
+</footer>
+
+<script src="values.js"></script>
+<script src="shared.js"></script>
+<script>
+  const CURRENT_PROJECT_ID = 2;
+  const adj = getAdjacentProjects(CURRENT_PROJECT_ID);
+  const nav = document.getElementById('navButtons');
+  let h = '';
+  if (adj.previous) h += `<a href="${adj.previous.link}" class="btn">← ${adj.previous.name}</a>`;
+  else h += `<button class="btn" disabled>← Previous</button>`;
+  h += `<a href="archive.html" class="btn primary">Back to Archive</a>`;
+  if (adj.next) h += `<a href="${adj.next.link}" class="btn">${adj.next.name} →</a>`;
+  else h += `<button class="btn" disabled>Next →</button>`;
+  nav.innerHTML = h;
+</script>
+</body>
+</html>
