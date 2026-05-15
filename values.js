@@ -12,7 +12,7 @@ const PROJECTS = [
   {
     id: 7,
     name: "ECVT Planetary Gearbox",
-    date: "Aug 2024 – May 2025",
+    date: "Jan 2026 – May 2026",
     link: "p7.html",
     heroImage: "https://pub-c94488256fcd4c54ba252c6fe9ad300d.r2.dev/pictures/p7/p7_hero.jpg",
     blurb: "A functional electronic continuously variable transmission using a sun-planetary gear system driven by two BLDC motors. Sand-cast aluminum housing, wire-EDM steel gears, and STM32 UART control.",
@@ -21,7 +21,7 @@ const PROJECTS = [
   {
     id: 6,
     name: "George Washington Sculpture",
-    date: "2024",
+    date: "Nov 2025-JAn 2026",
     link: "p6.html",
     heroImage: "https://pub-c94488256fcd4c54ba252c6fe9ad300d.r2.dev/pictures/p6/p6_hero.jpg",
     blurb: "A large-scale 3D printed sculpture with integrated electronics for audio playback. Soldered, bondo'd, sanded, and painted through multiple rounds of finishing.",
