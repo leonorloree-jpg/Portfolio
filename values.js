@@ -79,7 +79,7 @@ const WORK_EXPERIENCE = [
     company: "Plantd Materials",
     role: "Mechanical Engineering Intern",
     dates: "May 2025 – Aug 2025",
-    heroImage: "https://pub-c94488256fcd4c54ba252c6fe9ad300d.r2.dev/pictures/w1/w1_hero.jpg",
+    heroImage: "https://pub-c94488256fcd4c54ba252c6fe9ad300d.r2.dev/pictures/w2/w2_hero.jpg",
     blurb: "Worked across quality engineering, manufacturing engineering, and materials testing at a carbon-negative startup. Designed modular conveyor systems, press fixtures, and chain-mounted pushing assemblies with parametric CAD.",
     highlights: [
       "Parametric conveyor belt design with adjustable overhang angles",
@@ -88,7 +88,7 @@ const WORK_EXPERIENCE = [
     ],
     link: "w2.html"
   },
-  {
+  /*{
     company: "GT Propulsive Landers Club",
     role: "Structures Subteam",
     dates: "Jan 2025 – Dec 2025",
@@ -99,7 +99,7 @@ const WORK_EXPERIENCE = [
       "2500N hybrid engine structural design"
     ],
     link: "w1.html"
-  },
+  },*/
 ];
 
 const SKILLS = [
